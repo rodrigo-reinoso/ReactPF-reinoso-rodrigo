@@ -6,7 +6,7 @@ const Item = ({ id, img, name, price, stock }) => {
     return (
         <div className={classes.contenedor}>
             <div className="card">
-                <img src={img} className="card-img-top" />
+                <img src={img} className={`card-img-top ${classes.imagen}`}/>
                 <div className="card-body">
                     <h5 className={classes.tittleItem}>{name} </h5>
                     <div className={classes.contenedorItemPrecioStock}>

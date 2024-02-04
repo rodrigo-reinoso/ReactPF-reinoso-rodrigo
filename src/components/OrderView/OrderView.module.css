@@ -10,8 +10,8 @@
     display: inline;
     text-align: center;
     padding: 2rem;
-    border-radius: 2rem;
-    border: 2px solid;
+    
+    
 }
 
 .detalleCompra h4{
@@ -26,7 +26,17 @@ margin: 0;
     margin: 1rem 0 0 0;
 }
 
+
+
 .item ul li{
     font-size: 1.6rem;
     text-align: left;
+}
+
+.contenedorOpciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+
 }

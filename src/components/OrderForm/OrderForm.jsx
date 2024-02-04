@@ -46,7 +46,7 @@ const OrderForm = ({ onCreate }) => {
 
     return (
         <>
-            <section className={`container ${classes.contact}`}>
+            <section className='container'>
                 <form className={classes.form} onSubmit={handleSubmit}>
 
                     <legend>Completa todos los campos para generar la orden</legend>
@@ -68,8 +68,9 @@ const OrderForm = ({ onCreate }) => {
                             <input type="email" placeholder="Tu E-mail" value={email} onChange={handleEmailChange} />
                         </div>
                     </div>
-
-                    <input type="submit" value='Generar Orden' className={classes.submit} />
+                    <div className={classes.field}>
+                    <input type="submit" value='Generar Orden' className={classes.enviar} />
+                    </div>
 
                 </form>
             </section>

@@ -5,21 +5,30 @@ import Button from "../Button/Button"
 
 const CartView = () => {
 
-    const { cart, total, clearCart } = useCart()
+    const { cart, total, clearCart, totalQuantity } = useCart()
+
+    if (totalQuantity === 0) {
+        return (
+            <section className="container">
+                <h2>No tiene productos en el carrito</h2>
+                <Button to={'/'}>volver al inicio</Button>
+            </section>
+        )
+    }
 
     return (
         <>
-            <h1>ONE PIECE</h1>
-            <section className="cartViewContenedor">
-                <h3>Productos</h3>
+            <h2 className={classes.titulo}>Carrito</h2>
+            <section className="container">
+                <h3 className={classes.subtitulo}>Productos</h3>
                 {cart.map(prod => <CartItem key={prod.id} {...prod} />)}
-                <div className="contenedorOpciones">
-                    <button onClick={() => clearCart()}>Eliminar</button>
+
+                <div className={classes.contenedorOpciones}>
+                    <Button onClick={clearCart}>Vaciar Carrito</Button>
                     <Button to={'/checkout'}>checkout</Button>
+                    <h3 className={classes.total}>El total de sus Productos es: ${total}</h3>
                 </div>
-                <div className="total">
-                    <h3>El total de sus Productos es: ${total}</h3>
-                </div>
+
             </section>
         </>
     )

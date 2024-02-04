@@ -7,17 +7,16 @@ import { useState } from 'react'
 import { useCart } from '../../context/CartContext'
 
 const NavBar = () => {
-    const [show, setShow] = useState(false);
-    const {totalQuantity}= useCart()
+    const { totalQuantity } = useCart()
     return (
         <header className={classes.header}>
+
+            <Link className={classes.link} to='/'>
+                <h1 className={classes.titulo}>ONE PIECE</h1>
+                <img src={logo} alt="Icono de ONE PIECE" />
+            </Link>
+
             <nav className={classes.navBar}>
-                <Link className={classes.link} to='./'>
-                    <div className={classes.alineacion}>
-                        <h1 className={classes.titulo}>ONE PIECE</h1>
-                        <img src={logo} alt="Icono de ONE PIECE" />
-                    </div>
-                </Link>
                 <div className="container">
                     <ul className={classes.ul}>
                         <li> <Button to={'./category/figuras'}>Figuras</Button></li>
@@ -26,10 +25,8 @@ const NavBar = () => {
                     </ul>
                 </div>
 
-                {totalQuantity > 0 ? <Cart/> : null}
             </nav>
-
-
+            {totalQuantity > 0 ? <Cart /> : null}
         </header>
 
     )

@@ -1,8 +1,7 @@
 import ItemCount from '../ItemCount/ItemCount'
 import classes from './ItemDetail.module.css'
 import { useCart } from '../../context/CartContext'
-import { useState } from 'react'
-import { useNotification } from '../../notification/NotificationService'
+import { useNotification } from '../../Notification/NotificationService'
 
 
 const ItemDetail = ({ id, name, img, description, stock, price }) => {
@@ -19,7 +18,7 @@ const ItemDetail = ({ id, name, img, description, stock, price }) => {
         }
 
         addItem(objProduct)
-        showNotification('info', `Se agregaron correctamente ${quantity} ${name}`)
+        showNotification('success', `Se agregaron correctamente ${quantity} ${name}`)
     }
 
 

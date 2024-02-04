@@ -1,20 +1,32 @@
-.cartItemContenedor{
+.cartItemContenedor {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-radius: 2rem;
+    border-bottom: 1px solid gray;
+    padding-bottom: 5px;
+    margin-bottom: 2rem;
 }
 
-img{
+.cartItemContenedor h4,
+.cartItemContenedor p {
+    margin: 0;
+}
+
+img {
     width: 9rem;
 }
 
-h4{
+h4 {
     font-size: 1.5 rem;
 }
 
-.iconoEliminar{
+.iconoEliminar {
     font-size: 2rem;
-    color: rgb(34, 28, 28);
+    color: rgb(214, 22, 22);
+    background-color: transparent;
+    border: none;
+}
 
+.iconoEliminar:hover {
+    color: rgb(104, 8, 8);
 }

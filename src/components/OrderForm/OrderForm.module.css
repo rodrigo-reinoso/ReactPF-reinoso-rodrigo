@@ -1,6 +1,4 @@
-
-
-h3{
+h3 {
     font-size: 1.4rem;
     font-weight: bold;
     margin-bottom: 10px;
@@ -8,13 +6,13 @@ h3{
     background-color: rgb(93, 84, 84);
 }
 
-.formulario{
+.formulario {
     text-align: center;
-        margin: 0 auto;
-        padding: 1rem;
-        border-radius: 2rem;
-        border: 3px solid;
-        max-width: 60rem;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 2rem;
+    border: 3px solid;
+    max-width: 60rem;
 }
 
 input {
@@ -24,7 +22,7 @@ input {
     padding: .6rem;
 }
 
-.datos{
+.datos {
     display: flex;
     padding: 0 2rem;
     margin-bottom: 1rem;
@@ -34,23 +32,25 @@ input {
     gap: 0;
 }
 
-.enviar{
-    color: whitesmoke;
-    background-color: rgb(55, 14, 14);
-    padding: .5rem 1rem;
-    font-size: 1.3rem;
-    border-radius: 2rem;
+.enviar {
+    background-color: rgb(73, 10, 10);
+    color: white;
+    font-size: 1.4rem;
     text-decoration: none;
+    padding: .4rem 1rem;
+    text-transform: uppercase;
     font-weight: bold;
-    transition: all .3s ease-in-out;
-    margin: 2rem;
-    display: flex;
+    border-radius: 9px;
+    display: inline;
+    border: 2px solid red;
+    padding: 3px;
+    width: 100%;
+    margin: 1rem auto;
 }
 
-.enviar &:hover {
+.enviar:hover {
     background-color: whitesmoke;
     color: black;
-    border: 2px solid ;
+    border: 2px solid rgb(227, 187, 7);
     cursor: pointer;
-    scale: 1.1;
 }

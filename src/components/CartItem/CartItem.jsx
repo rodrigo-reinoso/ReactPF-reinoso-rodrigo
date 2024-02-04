@@ -8,14 +8,11 @@ const CartItem = ({ img, name, price, quantity, id }) => {
     const { removeItem } = useCart();
     const { showNotification } = useNotification()
 
-
     const deleteItem = () => {
         showNotification('success', 'Se elimina producto correctamente')
         removeItem(id);
 
     };
-
-
 
     return (
         <div className={classes.cartItemContenedor}>
@@ -24,7 +21,7 @@ const CartItem = ({ img, name, price, quantity, id }) => {
             <p>Precio Unitario: ${price}</p>
             <p>Cantidad: ${quantity}</p>
             <p>Subtotal: $ {price * quantity}</p>
-            <button onClick={deleteItem}>
+            <button onClick={deleteItem} className={classes.iconoEliminar}>
                 <FaTrash />
             </button>
         </div>

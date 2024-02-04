@@ -7,16 +7,15 @@ const Cart = () => {
   const { totalQuantity } = useCart()
 
   return (
+    <div className={classes.contenedorCart}>
+      <Button to='/cart'>
+        <div className={classes.botonCarrito}>
+          <FaCartShopping className={classes.carrito} />
+          <p>{totalQuantity}</p>
+        </div>
+      </Button>
 
-    <div className={classes.botonCarrito} >
-          <Button  to='/cart'>
-            <div className={classes.cartContenedor}>
-              <FaCartShopping className={classes.carrito}/>
-              <p>{totalQuantity}</p></div>
-          </Button>
     </div>
-
-    
   )
 }
 

@@ -1,41 +1,18 @@
-.header{
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.navbar{
- 
-    display: flex !important;
-    align-items: center;
-    justify-content: space-between;
-    height: 80px;
+.header {
+    border-bottom: 2px solid rgb(73, 10, 10);
+    padding-bottom: 1rem;
+    box-shadow: 0 4px 20px 11px rgb(58, 58, 58);
+    margin-bottom: 2rem;
 }
 
 .titulo {
-    text-align: center;
     color: rgb(31, 19, 3);
     font-size: 50px;
 }
 
-.alineacion{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-    .alineacion img  {
-    width: 10rem;
-    
-    display: flex;
-    align-items:center;
-    margin-bottom: 30px;
-}
-
-
 .ul {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 2rem;
     padding: 0;
 }
@@ -44,10 +21,10 @@ li {
     list-style-type: none;
 }
 
-.botoncito{
-    border-radius: 10px;
-}
- 
-.link{
+
+.link {
     text-decoration: none !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
