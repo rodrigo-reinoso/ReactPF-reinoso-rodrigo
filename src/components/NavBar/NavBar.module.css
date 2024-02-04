@@ -1,0 +1,53 @@
+.header{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar{
+ 
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.titulo {
+    text-align: center;
+    color: rgb(31, 19, 3);
+    font-size: 50px;
+}
+
+.alineacion{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+    .alineacion img  {
+    width: 10rem;
+    
+    display: flex;
+    align-items:center;
+    margin-bottom: 30px;
+}
+
+
+.ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+.botoncito{
+    border-radius: 10px;
+}
+ 
+.link{
+    text-decoration: none !important;
+}

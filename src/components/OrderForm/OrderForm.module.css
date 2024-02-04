@@ -1,0 +1,56 @@
+
+
+h3{
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: rgb(105, 31, 31);
+    background-color: rgb(93, 84, 84);
+}
+
+.formulario{
+    text-align: center;
+        margin: 0 auto;
+        padding: 1rem;
+        border-radius: 2rem;
+        border: 3px solid;
+        max-width: 60rem;
+}
+
+input {
+    width: 100%;
+    border-radius: 1rem;
+    border: 1px solid;
+    padding: .6rem;
+}
+
+.datos{
+    display: flex;
+    padding: 0 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+}
+
+.enviar{
+    color: whitesmoke;
+    background-color: rgb(55, 14, 14);
+    padding: .5rem 1rem;
+    font-size: 1.3rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all .3s ease-in-out;
+    margin: 2rem;
+    display: flex;
+}
+
+.enviar &:hover {
+    background-color: whitesmoke;
+    color: black;
+    border: 2px solid ;
+    cursor: pointer;
+    scale: 1.1;
+}

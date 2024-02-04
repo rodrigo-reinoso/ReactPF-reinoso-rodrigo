@@ -1,0 +1,16 @@
+.cartViewContenedor{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.contenedorOpciones{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+h3{
+    font-size: 1.2rem
+}
+

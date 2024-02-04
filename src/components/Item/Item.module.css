@@ -1,0 +1,30 @@
+.contenedor {
+    margin: 0 auto;
+}
+
+.tittleItem{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px bolder;
+    color: rgb(38, 36, 36) !important;   
+}
+
+.contenedorItemPrecioStock {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+}
+
+.containerPriceStock p strong {
+    font-size: 1rem;
+}
+
+.link{
+    text-decoration: none !important;
+}
+
+@media (max-width: 768px) {
+    .prop {
+        margin-bottom: 2rem;
+    }
+}

@@ -1,0 +1,26 @@
+.boton {
+    background-color: rgb(73, 10, 10);
+    color: white;
+    font-size: 1.4rem;
+    text-decoration: none;
+    padding: .4rem 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 9px;
+    display: inline;
+    border: 2px solid red;
+    padding: 3px;
+
+}
+
+.link{
+    text-decoration: none;
+
+}
+
+.boton:hover {
+    background-color: whitesmoke;
+    color: black;
+    border: 2px solid rgb(227, 187, 7);
+    cursor: pointer;
+}
