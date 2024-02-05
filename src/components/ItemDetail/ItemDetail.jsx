@@ -3,9 +3,8 @@ import classes from './ItemDetail.module.css'
 import { useCart } from '../../context/CartContext'
 import { useNotification } from '../../Notification/NotificationService'
 
-
 const ItemDetail = ({ id, name, img, description, stock, price }) => {
-    const { addItem } = useCart()
+    const { addItem, getProductQuantity } = useCart()
     const { showNotification } = useNotification()
 
     const handleOnAdd = (quantity) => {
@@ -18,9 +17,10 @@ const ItemDetail = ({ id, name, img, description, stock, price }) => {
         }
 
         addItem(objProduct)
-        showNotification('success', `Se agregaron correctamente ${quantity} ${name}`)
+        showNotification('success',` Se agregaron correctamente ${quantity} ${name}`)
     }
 
+    const productQuantity = getProductQuantity(id)
 
     return (
 
@@ -34,7 +34,9 @@ const ItemDetail = ({ id, name, img, description, stock, price }) => {
                     <p>Stock: {stock}</p>
                 </div>
                 <div className={classes.itemCountDetail}>
-                    <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} />
+                    {
+                        <ItemCount initial={productQuantity} stock={stock} onAdd={handleOnAdd} />
+                    }
                 </div>
             </div>
         </div>
