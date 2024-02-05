@@ -18,9 +18,9 @@ const CartItem = ({ img, name, price, quantity, id }) => {
         <div className={classes.cartItemContenedor}>
             <img className={classes.img} src={img} alt={`Imagen de ${name}`} />
             <h4>{name}</h4>
-            <p>Precio Unitario: ${price}</p>
-            <p>Cantidad: ${quantity}</p>
-            <p>Subtotal: $ {price * quantity}</p>
+            <p>Precio Unitario:  $ {price}</p>
+            <p>Cantidad:  {quantity}</p>
+            <p>Subtotal:  $ {price * quantity}</p>
             <button onClick={deleteItem} className={classes.iconoEliminar}>
                 <FaTrash />
             </button>

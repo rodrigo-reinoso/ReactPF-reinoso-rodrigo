@@ -1,13 +1,26 @@
-import classes from './NavBar.module.css'
-import logo from './assets/logo-calavera.jpg'
-import Button from '../Button/Button'
-import Cart from '../CartWidget/CartWidget'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
-import { useCart } from '../../context/CartContext'
+import CartWidget from '../CartWidget/CartWidget'
+import { collection, getDocs, query, orderBy } from '../../services/firebase/firestore/categories'
+import { db } from '../../services/firebase/firebaseConfig'
 
 const NavBar = () => {
-    const { totalQuantity } = useCart()
+    const [categories, setCategories] = useState([])
+
+    useEffect(() => {
+        const categoriesCollection = query(collection(db, 'categories'), orderBy('name', 'desc'))
+
+        getDocs(categoriesCollection)
+            .then(querySnapshot => {
+                const categoriesAdapted = querySnapshot.docs.map(doc => {
+                    const fields = doc.data()
+                    return { id: doc.id, ...fields}
+                })
+
+                setCategories(categoriesAdapted)
+            })
+    }, [])
+    
     return (
         <header className={classes.header}>
 
@@ -19,9 +32,10 @@ const NavBar = () => {
             <nav className={classes.navBar}>
                 <div className="container">
                     <ul className={classes.ul}>
-                        <li> <Button to={'./category/figuras'}>Figuras</Button></li>
-                        <li> <Button to={'./category/funko'}>Funkos</Button></li>
-                        <li> <Button to={'./category/taza'}>Tazas</Button></li>
+                        <li>
+                        { categories.map(cat => (<Link key={cat.id} to={`/category/${cat.slug}`}>{cat.name}</Link>))}
+                        </li>
+                        
                     </ul>
                 </div>
 

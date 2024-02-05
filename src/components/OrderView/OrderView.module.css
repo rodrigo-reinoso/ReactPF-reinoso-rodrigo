@@ -4,6 +4,9 @@
     padding: 1rem;
     border-radius: 2rem;
     border: 2px solid ;
+    margin-top: 0 !important;
+    max-width: 60rem;
+    
 }
 
 .total{
@@ -14,23 +17,21 @@
     
 }
 
-.detalleCompra h4{
-    margin: 1rem 0 0 0;
-}
-
 .detalleCompra p{
 margin: 0;
 }
 
 .item h3{
-    margin: 1rem 0 0 0;
+    margin: 0 ;
+    background-color: rgb(100, 25, 16);
+    color: whitesmoke;
+    height: 40px;
+    border-radius: 1rem;
 }
 
-
-
 .item ul li{
-    font-size: 1.6rem;
-    text-align: left;
+    font-size: 20px;
+    text-align:center;
 }
 
 .contenedorOpciones {

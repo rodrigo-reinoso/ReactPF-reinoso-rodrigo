@@ -6,30 +6,30 @@ h3 {
     background-color: rgb(93, 84, 84);
 }
 
-.formulario {
+.form {
     text-align: center;
     margin: 0 auto;
     padding: 1rem;
     border-radius: 2rem;
     border: 3px solid;
-    max-width: 60rem;
+    max-width: 55rem;
 }
 
 input {
     width: 100%;
     border-radius: 1rem;
     border: 1px solid;
-    padding: .6rem;
+    padding: 0.3rem;
 }
 
 .datos {
     display: flex;
-    padding: 0 2rem;
-    margin-bottom: 1rem;
-    font-size: 1.4rem;
+    padding: 3px;
+    font-size: 1.2rem;
     flex-direction: column;
     align-items: flex-start;
     gap: 0;
+
 }
 
 .enviar {

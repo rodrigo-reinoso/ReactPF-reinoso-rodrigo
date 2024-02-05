@@ -44,7 +44,7 @@ const OrderView = ({ orderSnapshot }) => {
                 <p className={classes.order}>
                     el ID de su compra es: <strong>{orderId}</strong>
                 </p>
-                <div className={classes.orderData}>
+                <div className={classes.item}>
                     {buyer && (
                         <div className={classes.buyer}>
                             <h3>Datos del Comprador:</h3>
@@ -62,11 +62,12 @@ const OrderView = ({ orderSnapshot }) => {
                                         Producto: {product.name}, Cantidad: {product.quantity}
                                     </li>
                                 ))}
+                                {total && <p className={classes.total}>Total de la compra: ${total}</p>}
+                
                             </ul>
                         </div>
                     )}
                 </div>
-                {total && <p className={classes.total}>Total de la compra: ${total}</p>}
                 <p>Pronto nos pondremos en contacto con usted</p>
                 <Button to={'/'}>Volver al inicio</Button>
             </div>

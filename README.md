@@ -14,8 +14,8 @@ Para aprovechar al máximo todas sus capacidades, solo necesitas conectar tu pro
 
 ## Correr de manera local
 ```
-$ git clone https://github.com/rodrigo-reinoso/PF_react_reinoso.git
-$ cd PF_react_reinoso
+$ git clone https://github.com/rodrigo-reinoso/reactPF-reinoso-rodrigo.git
+$ cd reactPF-reinoso-rodrigo
 $ npm install
 $ npm run dev
 
@@ -26,6 +26,10 @@ $ npm run dev
 + React + Vite
 + Firebase
 + SweetAlert2
++ React-icons
++ Bootstrap
+
+## Funcionamiento de sitio
 
 
 
